@@ -1,0 +1,613 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #8ACDD7;
+}
+
+.register-form-group ::placeholder {
+  color: #282c34;
+}
+
+nav {
+  background: #B4D4FF;
+  height: 2em;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 6em 1em 6em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  border-bottom: 0.5px solid #282c34;
+}
+
+.account {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 1.4em;
+  margin-right: 1em;
+}
+
+.register-app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  margin-bottom: 1em;
+}
+
+.open-nav {
+  width: 50%;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  padding: 1em;
+}
+
+.nav-links li {
+  padding: 1em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #282c34;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  color: #000;
+}
+
+
+.account img {
+  height: 40px;
+  width: 40px;
+  margin-right: 1em;
+}
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.add {
+  color: gray;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+.add-button {
+  color: gray;
+  border: none;
+  height: 2em;
+  width: 2em;
+  font-size: 1.2em;
+  margin-left: 0.5em;
+  margin-top: 1em;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translate(200%, 54.5%);
+  }
+  to {
+    transform: translate(100%, 54.5%);
+  }
+}
+
+.register-form {
+  border: 5px solid #282c34;
+  padding: 1em;
+  padding-top: 0;
+  color: black;
+  border-radius: 2em;
+}
+
+.register-form label {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.register-form input {
+  border: 1px solid #282c34;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: 15em;
+}
+
+.register-form p {
+  margin: 0;
+}
+
+.submit {
+  margin-left: 1em;
+  background: #282c34;
+  color: white;
+}
+
+.close-button {
+  position: absolute;
+  right: 4em;
+  font-size: 2em;
+  color: #282c34;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 99%;
+  position: relative;
+  background: #8ACDD7;
+  padding: 0.5em;
+}
+
+.day-panel {
+  width: 25%;
+  height: 100vh;
+  background: #ECF0F1;
+  margin: 0.2em;
+  border-radius: 20px;
+  padding-left: 1em;
+  overflow: scroll;
+  color: #2C3E50;
+}
+
+.dashboard {
+  width: 75%;
+  height: 100vh;
+  background: #ECF0F1;
+  margin: 0.2em;
+  border-radius: 20px;
+  overflow: scroll;
+  color: #2C3E50;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #282c34;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.username {
+  padding-left: 0.5em;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translate(100%, 54.5%);
+  }
+  to {
+    transform: translate(200%, 54.5%);
+  }
+}
+
+.workout-name {
+  font-size: 1em;
+  border-radius: 0.5em;
+}
+
+.create-workout {
+  border-radius: 0.5em;
+  background: #282c34;
+  color: white;
+  cursor: pointer;
+  margin-right: 0.2em;
+}
+
+.workout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1em;
+  margin-right: 1em;
+  padding-left: 0.5em;
+  margin-top: 0.5em;
+  transition: ease-in-out 0.3s;
+}
+
+.workout-item:hover {
+  background-color: #3498DB;
+  color: #ECF0F1;
+}
+
+.delete-icon {
+  cursor: pointer;
+  display: none;
+  margin-right: 1em;
+}
+
+.workout-item.hovered .delete-icon { 
+  display: inline;
+  color: red;
+}
+
+.dropdown {
+  min-width: 15em;
+  max-width: 15em;
+  position: relative;
+  margin: 2em;
+  margin-top: 0.5em;
+  display: flex;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  align-items: center;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  width: 7em;
+}
+
+.select-clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+  color: gray;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #000;
+  transition: 0.3s;
+  margin-left: 0.5em;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  max-height: 30rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: white;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 25%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  color: black;
+  width: 7em;
+}
+
+.menu li:hover {
+  background: #3498DB;
+  color: white;
+}
+
+.menu .active {
+  background: #3498DB;
+  color: white;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+.addExcercise {
+  color: gray;
+  margin: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 0.95em;
+}
+
+.addExcercise:hover {
+  color: #27AE60;
+}
+
+.selected-workout {
+  background-color: #3498DB;
+  color: #ECF0F1 ;
+}
+
+.exercises-list {
+  margin: 3em;
+  margin-top: -2.5em;
+}
+
+.fix-top-margin {
+  margin-top: 3em;
+  margin-left: 3em;
+}
+
+.exercises-list ul {
+  list-style: none;
+}
+
+.excercise-header {
+  border-bottom: 0.5px solid #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exercise {
+  border-radius: 1em;
+  margin-right: 1em;
+  transition: ease-in-out 0.3s;
+  background: #27AE60;
+  color: #ECF0F1 ;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.exercise-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.exercises-list ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.exercise-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+} 
+
+.exercise-info-item {
+  padding-right: 1em;
+  text-align: center;
+}
+
+.exercise-form {
+  margin: 3em;
+  margin-top: -2.7em;
+  background-color: #27AE60;
+  border-radius: 1em;
+  padding: 1em;
+  width: 13.5em;
+  color: #ECF0F1;
+}
+
+.exercise-form button {
+  margin-right: 2em;
+  background: #3498DB;
+  color: #ECF0F1;
+  border-radius: 1em;
+  border: none;
+  cursor: pointer;
+  height: 2em;
+  margin-left: 2em;
+}
+
+.create-exercise {
+  border-radius: 0.5em;
+  background: #3498DB;
+  color: #ECF0F1;
+  cursor: pointer;
+  margin-right: 2em;
+  border: none;
+  margin-left: 2em;
+  height: 2em;
+}
+
+.no-pad {
+  padding-right: 0;
+}
+
+.icon {
+  cursor: pointer;
+  margin-right: 1em;
+}
+
+.exercise-icons {
+  padding-top: 1.25em;
+}
+
+.edit-exercise-form {
+  border-radius: 1em;
+  margin-right: 1em;
+  transition: ease-in-out 0.3s;
+  background: #27AE60;
+  color: #ECF0F1;
+  padding: 1em;
+  margin-bottom: 1em;
+  width: 14em;
+}
+
+::placeholder {
+  color: #282c34;
+}
+
+.edit-exercise-form input, .exercise-form input {
+  background: #27AE60;
+  color: #ECF0F1;
+  border: none;
+  border-bottom: 0.5px solid #fff;
+  width: 100%;
+  font-size: 1em;
+}
+
+.heading {
+  border-bottom: 0.5px solid #fff;
+}
+
+.no-exercises {
+  color: gray;
+}
+
+.logout {
+  background: #3498DB;
+  border: none;
+  color: #ECF0F1;
+  border-radius: 0.5em;
+  transform: translateX(-0.3em);
+  display: none;
+  height: 2em;
+  cursor: pointer;
+}
+
+.account:hover .logout {
+  display: block;
+}
+
+.select-workout {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    width: 96%;
+  }
+  .day-panel {
+    display: none;
+    width: 94%;
+  }
+  .dashboard-nav {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .fix-top-margin {
+    margin-top: 0;
+    margin-left: 1.5em;
+  }
+  .delete-icon {
+    display: inline;
+  }
+  .select-workout {
+    background: #27AE60;
+    color: #ECF0F1;
+    border-radius: 0.5em;
+    border: none;
+    height: 2em;
+    display: block;
+  }
+  .hide {
+    display: inline;
+    margin-right: 1em;
+  }
+
+  .exercise {
+    width: 17em;
+  }
+}
+
+.input-header {
+  padding-bottom: 0;
+}
+
+.exercise-name {
+  margin-right: 1em;
+}
+
+.exercise-form ::placeholder {
+  color: #ECF0F1;
+}
